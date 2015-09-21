@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A534ED11BAFAF8B0075912B /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A534ED01BAFAF8B0075912B /* TabViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		2A534ED31BAFB3EE0075912B /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A534ED21BAFB3EE0075912B /* HomeTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		2A534ED51BAFC5D60075912B /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A534ED41BAFC5D60075912B /* SwipeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		2A534ED71BAFCB910075912B /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A534ED61BAFCB910075912B /* ApiCaller.swift */; settings = {ASSET_TAGS = (); }; };
 		2AA7242D1BAE3F5F004BAA5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA7242C1BAE3F5F004BAA5C /* AppDelegate.swift */; };
 		2AA7242F1BAE3F5F004BAA5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA7242E1BAE3F5F004BAA5C /* ViewController.swift */; };
 		2AA724321BAE3F5F004BAA5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA724301BAE3F5F004BAA5C /* Main.storyboard */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A534ED01BAFAF8B0075912B /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		2A534ED21BAFB3EE0075912B /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		2A534ED41BAFC5D60075912B /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
+		2A534ED61BAFCB910075912B /* ApiCaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
 		2AA724291BAE3F5F004BAA5C /* parius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = parius.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA7242C1BAE3F5F004BAA5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AA7242E1BAE3F5F004BAA5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,10 +107,14 @@
 			children = (
 				2AA7242C1BAE3F5F004BAA5C /* AppDelegate.swift */,
 				2AA7242E1BAE3F5F004BAA5C /* ViewController.swift */,
+				2A534ED01BAFAF8B0075912B /* TabViewController.swift */,
+				2A534ED21BAFB3EE0075912B /* HomeTableViewController.swift */,
 				2AA724301BAE3F5F004BAA5C /* Main.storyboard */,
 				2AA724331BAE3F5F004BAA5C /* Assets.xcassets */,
 				2AA724351BAE3F5F004BAA5C /* LaunchScreen.storyboard */,
 				2AA724381BAE3F5F004BAA5C /* Info.plist */,
+				2A534ED41BAFC5D60075912B /* SwipeViewController.swift */,
+				2A534ED61BAFCB910075912B /* ApiCaller.swift */,
 			);
 			path = parius;
 			sourceTree = "<group>";
@@ -255,6 +267,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A534ED51BAFC5D60075912B /* SwipeViewController.swift in Sources */,
+				2A534ED71BAFCB910075912B /* ApiCaller.swift in Sources */,
+				2A534ED31BAFB3EE0075912B /* HomeTableViewController.swift in Sources */,
+				2A534ED11BAFAF8B0075912B /* TabViewController.swift in Sources */,
 				2AA7242F1BAE3F5F004BAA5C /* ViewController.swift in Sources */,
 				2AA7242D1BAE3F5F004BAA5C /* AppDelegate.swift in Sources */,
 			);
@@ -483,6 +499,7 @@
 				2AA724531BAE3F5F004BAA5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2AA724541BAE3F5F004BAA5C /* Build configuration list for PBXNativeTarget "pariusTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +508,7 @@
 				2AA724561BAE3F5F004BAA5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2AA724571BAE3F5F004BAA5C /* Build configuration list for PBXNativeTarget "pariusUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +517,7 @@
 				2AA724591BAE3F5F004BAA5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
