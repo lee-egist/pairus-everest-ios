@@ -25,10 +25,14 @@ class SwipeViewController: UIViewController, UIGestureRecognizerDelegate{
     
     func handleSwipes(sender:UISwipeGestureRecognizer) {
         if (sender.direction == .Left) {
+//            create the potential pair and set user1_accepted to false
+//            change the info and image on the page to the next availiablity
             print("Swipe Left")
         }
         
         if (sender.direction == .Right) {
+//            create the potential pair and set user1_accepted to true
+//            change the info and image on the page to the next availiablity
             print("Swipe Right")
         }
     }

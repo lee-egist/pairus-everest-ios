@@ -98,23 +98,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="zec-bo-6TK" customClass="groupTopicCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" editingAccessoryType="checkmark" id="zec-bo-6TK" customClass="groupTopicCell">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zec-bo-6TK" id="fvc-GF-fLZ">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="IZo-0W-hdR" kind="show" id="96C-Or-TO3"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="9Ce-ZB-dA0" id="27V-33-mb1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Topics" id="32m-N4-p3K"/>
+                    <navigationItem key="navigationItem" title="Topics" id="32m-N4-p3K">
+                        <barButtonItem key="rightBarButtonItem" title="Find Pairs" id="SnJ-Lb-VCT">
+                            <connections>
+                                <segue destination="IZo-0W-hdR" kind="show" id="AlN-IG-lxw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wom-1c-j2b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
