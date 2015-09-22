@@ -199,6 +199,7 @@
 		2AA724211BAE3F5F004BAA5C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = com.RAREStudios;
 				TargetAttributes = {
