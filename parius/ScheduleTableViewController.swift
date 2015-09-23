@@ -13,6 +13,38 @@ class ScheduleTableViewController: UITableViewController {
     
     var schedule: NSArray = NSArray()
     
+    var hoursCollection = [Hour]()
+    
+    var service:HourService!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        service = HourService()
+        service.getHours {
+            (response) in
+            //            self.loadHours(response["hours"]! as! NSArray)
+            self.loadHours(response)
+        }
+    }
+    
+    func loadHours(topics:NSArray) {
+        //        for hour in hours {
+        //
+        //            let hour = hour["Hour"]! as! NSDictionary
+        //
+        //            var id = Int(hour["id"]! as! String)!
+        //
+        //            var user_id = Int(topic["user_id"]! as! String)!
+        //
+        //            var day = Int(hour["day"]! as! String)!
+        //
+        //            var hr = Int(topic["hr"]! as! String)!
+        //        
+        //            let taken = hour["taken"]! as! Bool
+        //
+        //        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
     }
