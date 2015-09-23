@@ -10,9 +10,7 @@
 		0968EA8F1BB1E10B00FABE9B /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0968EA8E1BB1E10B00FABE9B /* Topic.swift */; settings = {ASSET_TAGS = (); }; };
 		0968EA911BB1E11F00FABE9B /* TopicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0968EA901BB1E11F00FABE9B /* TopicService.swift */; settings = {ASSET_TAGS = (); }; };
 		0968EA931BB1E12E00FABE9B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0968EA921BB1E12E00FABE9B /* Settings.swift */; settings = {ASSET_TAGS = (); }; };
-		2A0593E51BB2658200A0EC32 /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0593E41BB2658200A0EC32 /* ScheduleTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		2A0593E71BB26A3700A0EC32 /* schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0593E61BB26A3700A0EC32 /* schedule.swift */; settings = {ASSET_TAGS = (); }; };
-		2A0593E91BB26AF600A0EC32 /* Availability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0593E81BB26AF600A0EC32 /* Availability.swift */; settings = {ASSET_TAGS = (); }; };
+		0968EA9B1BB32F6700FABE9B /* Hour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0968EA9A1BB32F6700FABE9B /* Hour.swift */; settings = {ASSET_TAGS = (); }; };
 		2A534ED11BAFAF8B0075912B /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A534ED01BAFAF8B0075912B /* TabViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		2A534ED31BAFB3EE0075912B /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A534ED21BAFB3EE0075912B /* HomeTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		2A534ED51BAFC5D60075912B /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A534ED41BAFC5D60075912B /* SwipeViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -47,8 +45,8 @@
 		0968EA8E1BB1E10B00FABE9B /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		0968EA901BB1E11F00FABE9B /* TopicService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicService.swift; sourceTree = "<group>"; };
 		0968EA921BB1E12E00FABE9B /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		0968EA9A1BB32F6700FABE9B /* Hour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hour.swift; sourceTree = "<group>"; };
 		2A0593E41BB2658200A0EC32 /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
-		2A0593E61BB26A3700A0EC32 /* schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = schedule.swift; sourceTree = "<group>"; };
 		2A0593E81BB26AF600A0EC32 /* Availability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Availability.swift; sourceTree = "<group>"; };
 		2A534ED01BAFAF8B0075912B /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		2A534ED21BAFB3EE0075912B /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
@@ -111,7 +109,7 @@
 			children = (
 				0968EA8E1BB1E10B00FABE9B /* Topic.swift */,
 				2A0593E81BB26AF600A0EC32 /* Availability.swift */,
-				2A0593E61BB26A3700A0EC32 /* schedule.swift */,
+				0968EA9A1BB32F6700FABE9B /* Hour.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -311,14 +309,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A534ED51BAFC5D60075912B /* SwipeViewController.swift in Sources */,
+				0968EA9B1BB32F6700FABE9B /* Hour.swift in Sources */,
 				2A534ED71BAFCB910075912B /* ApiCaller.swift in Sources */,
 				2A534ED31BAFB3EE0075912B /* HomeTableViewController.swift in Sources */,
 				2A534ED11BAFAF8B0075912B /* TabViewController.swift in Sources */,
-				2A0593E71BB26A3700A0EC32 /* schedule.swift in Sources */,
-				2A0593E91BB26AF600A0EC32 /* Availability.swift in Sources */,
 				2AA7242F1BAE3F5F004BAA5C /* ViewController.swift in Sources */,
 				0968EA911BB1E11F00FABE9B /* TopicService.swift in Sources */,
-				2A0593E51BB2658200A0EC32 /* ScheduleTableViewController.swift in Sources */,
 				0968EA931BB1E12E00FABE9B /* Settings.swift in Sources */,
 				2AA7242D1BAE3F5F004BAA5C /* AppDelegate.swift in Sources */,
 				0968EA8F1BB1E10B00FABE9B /* Topic.swift in Sources */,

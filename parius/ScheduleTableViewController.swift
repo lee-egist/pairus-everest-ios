@@ -11,7 +11,7 @@ import UIKit
 
 class ScheduleTableViewController: UITableViewController {
     
-    var schedule: NSDictionary = NSDictionary()
+    var schedule: NSArray = NSArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
