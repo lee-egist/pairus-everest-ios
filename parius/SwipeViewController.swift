@@ -33,7 +33,9 @@ class SwipeViewController: UIViewController, UIGestureRecognizerDelegate{
         if (sender.direction == .Right) {
 //            create the potential pair and set user1_accepted to true
 //            change the info and image on the page to the next availiablity
+//            add the availablity in to an array which will be sent back to the db
             print("Swipe Right")
+        
         }
     }
 }
