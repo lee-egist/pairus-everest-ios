@@ -22,7 +22,8 @@ class Hour {
         self.hr = hr
         self.taken = taken
     }
+    
     func toJSON() -> String {
-        return ""
+            return ""
     }
 }

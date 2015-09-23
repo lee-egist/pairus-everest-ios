@@ -18,7 +18,10 @@ class Topic {
         self.title = title
         self.group_id = group_id
     }
-    func toJSON() -> String {
-        return ""
-    }
+    
+    //        this should be used if we are going to add topics
+//    func toJSON() -> String {
+//
+//        return ""
+//    }
 }

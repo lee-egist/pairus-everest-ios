@@ -64,7 +64,7 @@
         <!--Schedule-->
         <scene sceneID="OMi-5R-kMG">
             <objects>
-                <tableViewController id="9bW-ls-AC9" sceneMemberID="viewController">
+                <tableViewController id="9bW-ls-AC9" customClass="ScheduleTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="J5o-U4-8FJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
