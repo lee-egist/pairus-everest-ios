@@ -10,6 +10,9 @@
 		0968EA8F1BB1E10B00FABE9B /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0968EA8E1BB1E10B00FABE9B /* Topic.swift */; settings = {ASSET_TAGS = (); }; };
 		0968EA911BB1E11F00FABE9B /* TopicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0968EA901BB1E11F00FABE9B /* TopicService.swift */; settings = {ASSET_TAGS = (); }; };
 		0968EA931BB1E12E00FABE9B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0968EA921BB1E12E00FABE9B /* Settings.swift */; settings = {ASSET_TAGS = (); }; };
+		0968EA951BB306B500FABE9B /* Hour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0968EA941BB306B500FABE9B /* Hour.swift */; settings = {ASSET_TAGS = (); }; };
+		0968EA971BB30EC900FABE9B /* HourService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0968EA961BB30EC900FABE9B /* HourService.swift */; settings = {ASSET_TAGS = (); }; };
+		0968EA991BB30F5B00FABE9B /* Availability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0968EA981BB30F5B00FABE9B /* Availability.swift */; settings = {ASSET_TAGS = (); }; };
 		2A534ED11BAFAF8B0075912B /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A534ED01BAFAF8B0075912B /* TabViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		2A534ED31BAFB3EE0075912B /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A534ED21BAFB3EE0075912B /* HomeTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		2A534ED51BAFC5D60075912B /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A534ED41BAFC5D60075912B /* SwipeViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -44,6 +47,9 @@
 		0968EA8E1BB1E10B00FABE9B /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		0968EA901BB1E11F00FABE9B /* TopicService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicService.swift; sourceTree = "<group>"; };
 		0968EA921BB1E12E00FABE9B /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		0968EA941BB306B500FABE9B /* Hour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hour.swift; sourceTree = "<group>"; };
+		0968EA961BB30EC900FABE9B /* HourService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourService.swift; sourceTree = "<group>"; };
+		0968EA981BB30F5B00FABE9B /* Availability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Availability.swift; sourceTree = "<group>"; };
 		2A534ED01BAFAF8B0075912B /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		2A534ED21BAFB3EE0075912B /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		2A534ED41BAFC5D60075912B /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
@@ -122,8 +128,11 @@
 				2A534ED41BAFC5D60075912B /* SwipeViewController.swift */,
 				2A534ED61BAFCB910075912B /* ApiCaller.swift */,
 				0968EA8E1BB1E10B00FABE9B /* Topic.swift */,
+				0968EA941BB306B500FABE9B /* Hour.swift */,
+				0968EA981BB30F5B00FABE9B /* Availability.swift */,
 				0968EA921BB1E12E00FABE9B /* Settings.swift */,
 				0968EA901BB1E11F00FABE9B /* TopicService.swift */,
+				0968EA961BB30EC900FABE9B /* HourService.swift */,
 			);
 			path = parius;
 			sourceTree = "<group>";
@@ -277,7 +286,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0968EA991BB30F5B00FABE9B /* Availability.swift in Sources */,
 				2A534ED51BAFC5D60075912B /* SwipeViewController.swift in Sources */,
+				0968EA951BB306B500FABE9B /* Hour.swift in Sources */,
 				2A534ED71BAFCB910075912B /* ApiCaller.swift in Sources */,
 				2A534ED31BAFB3EE0075912B /* HomeTableViewController.swift in Sources */,
 				2A534ED11BAFAF8B0075912B /* TabViewController.swift in Sources */,
@@ -285,6 +296,7 @@
 				0968EA911BB1E11F00FABE9B /* TopicService.swift in Sources */,
 				0968EA931BB1E12E00FABE9B /* Settings.swift in Sources */,
 				2AA7242D1BAE3F5F004BAA5C /* AppDelegate.swift in Sources */,
+				0968EA971BB30EC900FABE9B /* HourService.swift in Sources */,
 				0968EA8F1BB1E10B00FABE9B /* Topic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

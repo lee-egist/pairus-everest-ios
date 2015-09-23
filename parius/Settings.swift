@@ -9,7 +9,7 @@
 import Foundation
 
 class Settings {
-    var viewTopics = "https://api.github.com/users/mralexgray/repos"
-    
+    var viewTopics = "https://localhost:3000/api/v1/groups/topics"
+        
     
 }
