@@ -10,11 +10,12 @@ import Foundation
 
 class Settings {
         
-    var viewTopics = "https://localhost:3000/api/v1/groups/topics"
+    var viewTopics = "https://api.github.com/users/mralexgray/repos"
+    var viewHours = "https://sheltered-coast-5550.herokuapp.com/api/v1/schedule"
+
     
     var login = "https://sheltered-coast-5550.herokuapp.com/api/v1/login"
     var logout = "https://sheltered-coast-5550.herokuapp.com/api/v1/logout"
-    var getSchedule = "https://sheltered-coast-5550.herokuapp.com/api/v1/schedule"
     var getPotentialPairs = "https://sheltered-coast-5550.herokuapp.com/api/v1/availabilities"
     
     

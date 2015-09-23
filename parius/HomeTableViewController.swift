@@ -46,7 +46,7 @@ class HomeTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return topicsCollection.count
+        return 50
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
