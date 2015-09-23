@@ -16,22 +16,20 @@ class TopicService {
         self.settings = Settings()
     }
     
-    func getTopics(callback:(NSDictionary) -> ()) {
+    func getTopics(callback:(NSArray) -> ()) {
         request(settings.viewTopics, callback: callback)
     }
     
-    func request(url:String, callback:(NSDictionary) -> ()) {
+    func request(url:String, callback:(NSArray) -> ()) {
         
-        let urlAsString = "http://localhost:3000"
-        let nsURL = NSURL(string: urlAsString)!
+        let nsURL = NSURL(string: url)
         
-        let task = NSURLSession.sharedSession().dataTaskWithURL(nsURL, completionHandler: { data, response, error -> Void in
+        let task = NSURLSession.sharedSession().dataTaskWithURL(nsURL!, completionHandler: { data, response, error -> Void in
             if (error != nil) {
                 print(error!.localizedDescription)
             }
-            var error: NSError?
             do {
-            let response = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers) as! NSDictionary
+            let response = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers) as! NSArray
             callback(response)
             } catch let error as NSError {
             print(error.localizedDescription)
