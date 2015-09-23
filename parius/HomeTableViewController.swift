@@ -30,23 +30,23 @@ class HomeTableViewController: UITableViewController {
     }
     
     func loadTopics(topics:NSArray) {
-//        for topic in topics {
+        for topic in topics {
         
-//            var topic = topic["Topic"]! as! NSDictionary
+            let topic = topic["Topic"]! as! NSDictionary
             
-//            var id = Int(topic["id"]! as! String)!
-//            
-//            var title = topic["title"]! as! String!
-//            
-//            var group_id = Int(topic["group_id"]! as! String)!
+            var id = Int(topic["id"]! as! String)!
+            
+            var title = topic["title"]! as! String
+            
+            var group_id = Int(topic["group_id"]! as! String)!
             
             
             
-//        }
+        }
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        return topicsCollection.count
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
