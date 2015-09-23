@@ -12,13 +12,15 @@ class Availability {
     var id:Int
     var user_selected_topic_id:Int
     var hour_id:Int
+    var taken:Bool
+
     
     init(id:Int, user_selected_topic_id:Int, hour_id:Int, taken:Bool) {
         self.id = id
         self.user_selected_topic_id = user_selected_topic_id
         self.hour_id = hour_id
     }
-    func toJSON() -> String {
-        return ""
-    }
+//    func toJSON() -> String {
+//        return ""
+//    }
 }
