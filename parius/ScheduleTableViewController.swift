@@ -9,16 +9,14 @@
 import Foundation
 import UIKit
 
-class ScheduleTableViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    @IBOutlet var tableView: UITableView
+class ScheduleTableViewController: UITableViewController {
     
     var hoursCollection = [Hour]()
     
     var service:HourService!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(animated:Bool) {
+        super.viewWillAppear(animated)
         
         service = HourService()
         service.getHours {
@@ -55,14 +53,14 @@ class ScheduleTableViewController: UITableViewController, UITableViewDelegate, U
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("dateCell", forIndexPth: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("dateCell", forIndexPath: indexPath) as UITableViewCell
         
         let hour = hoursCollection[indexPath.row]
-        cell?.textLabel?.text = hour.day
+        cell.textLabel?.text = String(hour.day)
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
     }
 }

@@ -16,8 +16,8 @@ class HomeTableViewController: UITableViewController {
     
     var service:TopicService!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(animated:Bool) {
+        super.viewWillAppear(animated)
         
         service = TopicService()
         service.getTopics {
@@ -28,8 +28,8 @@ class HomeTableViewController: UITableViewController {
     }
     
     func loadTopics(topics:NSArray) {
+        topicsCollection.removeAll(keepCapacity: true)
         for topic in topics {
-            
             var id =  topic["id"] as! Int
             var title = topic["title"]! as! String
             var group_id = topic["group_id"]! as! Int
