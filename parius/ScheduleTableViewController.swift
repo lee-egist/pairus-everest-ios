@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-class ScheduleTableViewController: UITableViewController {
+class ScheduleTableViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet var tableView: UITableView
     
     var hoursCollection = [Hour]()
     
