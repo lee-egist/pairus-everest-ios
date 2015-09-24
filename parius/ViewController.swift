@@ -13,10 +13,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var tableview: UITableView?
+
     var settings: Settings = Settings()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tableview?.contentInset = UIEdgeInsetsMake(20.0, 0.0, 0.0, 0.0);
         // Do any additional setup after loading the view, typically from a nib.
     }
     override func didReceiveMemoryWarning() {

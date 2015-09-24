@@ -11,8 +11,6 @@ import UIKit
 
 class ScheduleTableViewController: UITableViewController {
     
-    var schedule: NSArray = NSArray()
-    
     var hoursCollection = [Hour]()
     
     var service:HourService!
@@ -31,6 +29,7 @@ class ScheduleTableViewController: UITableViewController {
     func loadHours(hours:NSArray) {
         for hour in hours {
             print(hour)
+            
             var id = hour["id"]! as! Int
             var user_id = hour["user_id"]! as! Int
             var day = hour["day"]! as! Int
@@ -39,6 +38,7 @@ class ScheduleTableViewController: UITableViewController {
             var hourObj = Hour(id: id, user_id: user_id, day: day, hr: hr, taken: taken)
 
             hoursCollection.append(hourObj)
+            
             dispatch_async(dispatch_get_main_queue()) {
                 self.tableView.reloadData()
             }
@@ -47,16 +47,20 @@ class ScheduleTableViewController: UITableViewController {
     }
     
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return hoursCollection.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("dateCell", forIndexPath: indexPath)
-        return cell;
+        let cell = tableView.dequeueReusableCellWithIdentifier("dateCell", forIndexPth: indexPath) as! UITableViewCell
+        
+        let hour = hoursCollection[indexPath.row]
+        cell?.textLabel?.text = hour.day
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
     }
 }
