@@ -16,11 +16,11 @@ class HourService {
         self.settings = Settings()
     }
     
-    func getHours(callback:(NSArray) -> ()) {
+    func getHours(callback:(NSDictionary) -> ()) {
         request(settings.viewHours, callback: callback)
     }
     
-    func request(url:String, callback:(NSArray) -> ()) {
+    func request(url:String, callback:(NSDictionary) -> ()) {
         
         let nsURL = NSURL(string: url)
         
@@ -29,7 +29,7 @@ class HourService {
                 print(error!.localizedDescription)
             }
             do {
-                let response = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers) as! NSArray
+                let response = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers) as! NSDictionary
                 callback(response)
             } catch let error as NSError {
                 print(error.localizedDescription)

@@ -52,7 +52,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="handle" destination="gK1-JU-hBY" id="blP-ox-Lyv"/>
+                        <outlet property="email" destination="gK1-JU-hBY" id="H25-sU-hP0"/>
                         <outlet property="loginButton" destination="V6y-SV-uGP" id="1uS-Zm-80z"/>
                         <outlet property="password" destination="4am-ep-I1A" id="1RU-mQ-YuP"/>
                     </connections>
@@ -135,8 +135,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9bW-ls-AC9" kind="relationship" relationship="viewControllers" id="ia7-50-vc2"/>
                         <segue destination="g1z-qm-uXB" kind="relationship" relationship="viewControllers" id="fGF-T0-A62"/>
+                        <segue destination="9bW-ls-AC9" kind="relationship" relationship="viewControllers" id="ia7-50-vc2"/>
                         <segue destination="RTa-js-L76" kind="relationship" relationship="viewControllers" id="fBZ-c3-aZm"/>
                     </connections>
                 </tabBarController>
