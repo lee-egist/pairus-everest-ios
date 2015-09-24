@@ -1,5 +1,5 @@
 //
-//  HourService.swift
+//  MatchService.swift
 //  parius
 //
 //  Created by Apprentice on 9/23/15.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class HourService {
+class MatchService {
     
     var settings: Settings!
     
@@ -16,11 +16,11 @@ class HourService {
         self.settings = Settings()
     }
     
-    func getHours(callback:(NSDictionary) -> ()) {
-        request(settings.viewHours, callback: callback)
+    func getMatches(callback:(NSArray) -> ()) {
+        request(settings.viewMatches, callback: callback)
     }
     
-    func request(url:String, callback:(NSDictionary) -> ()) {
+    func request(url:String, callback:(NSArray) -> ()) {
         
         let nsURL = NSURL(string: url)
         
@@ -29,7 +29,7 @@ class HourService {
                 print(error!.localizedDescription)
             }
             do {
-                let response = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                let response = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers) as! NSArray
                 callback(response)
             } catch let error as NSError {
                 print(error.localizedDescription)
