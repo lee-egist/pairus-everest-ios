@@ -21,7 +21,6 @@ class AvailabilityService {
     }
     
     func request(url:String, callback:(NSArray) -> ()) {
-        
         let nsURL = NSURL(string: url)
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(nsURL!, completionHandler: { data, response, error -> Void in

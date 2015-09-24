@@ -19,9 +19,9 @@ class Topic {
         self.group_id = group_id
     }
     
-    //        this should be used if we are going to add topics
+//            this should be used if we are going to add topics
 //    func toJSON() -> String {
 //
-//        return ""
+//        return "https://secure-fjord-3157.herokuapp.com/api/v1/groups/1"
 //    }
 }

@@ -12,8 +12,6 @@ import UIKit
 class HomeTableViewController: UITableViewController {
     
     
-    var viewTopics = "url"
-    
     var topicsCollection = [Topic]()
     
     var service:TopicService!
@@ -33,11 +31,8 @@ class HomeTableViewController: UITableViewController {
         for topic in topics {
             
             var id =  topic["id"] as! Int
-
             var title = topic["title"]! as! String
-
             var group_id = topic["group_id"]! as! Int
-
             var topicObj = Topic(id: id, title: title, group_id: group_id)
 
             topicsCollection.append(topicObj)
@@ -51,7 +46,6 @@ class HomeTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return topicsCollection.count
-//        return 50
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

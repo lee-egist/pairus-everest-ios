@@ -13,7 +13,7 @@ class Hour {
     var user_id:Int
     var day:Int
     var hr:Int
-    var taken: Bool
+    var taken:Bool
     
     init(id:Int, user_id:Int, day:Int, hr:Int, taken:Bool) {
         self.id = id
@@ -24,6 +24,7 @@ class Hour {
     }
 //    
 //    func toJSON() -> String {
-//            return ""
+//            return "https://secure-fjord-3157.herokuapp.com/api/v1/hours"
 //    }
+    
 }
