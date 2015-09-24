@@ -19,7 +19,7 @@ class Availability {
         self.user_selected_topic_id = user_selected_topic_id
         self.hour_id = hour_id
     }
-    func toJSON() -> String {
-        return ""
-    }
+//    func toJSON() -> String {
+//        return ""
+//    }
 }

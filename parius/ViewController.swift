@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var handle: UITextField!
+    @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     var settings: Settings = Settings()
@@ -25,37 +25,28 @@ class ViewController: UIViewController {
     }
 
     @IBAction func loginButtonPressed() {
-        if (handle.text != nil && password.text != nil){
-            
-        }
-//        /users/sign_in(.:format)
-        performSegueWithIdentifier("login", sender: nil)
-    }
-    
-    func getTopics(callback:(NSArray) -> ()) {
-        request(settings.login, callback: callback)
-    }
-    
-    func request(url:String, callback:(NSArray) -> ()) {
+        if email.text != nil && password.text != nil{
+        // set up the base64-encoded credentials
+            let username: String = email.text!
+            let passwrd: String = password.text!
+        let loginString = NSString(format: "%@:%@", username, passwrd)
+        let loginData: NSData = loginString.dataUsingEncoding(NSUTF8StringEncoding)!
+            let base64LoginString = loginData.base64EncodedDataWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
         
-        let nsURL = NSURL(string: url)
-/*        this is where we set the httpbody that is posted as params
-        handle.text and password.text coverted to NSDATA
-        var HTTPBody: NSData?
-        let theRequest: NSMutableURLRequest = NSMutableURLRequest
-*/
-        let task = NSURLSession.sharedSession().dataTaskWithURL(nsURL!, completionHandler: { data, response, error -> Void in
-            if (error != nil) {
-                print(error!.localizedDescription)
-            }
-            do {
-                let response = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers) as! NSArray
-                callback(response)
-            } catch let error as NSError {
-                print(error.localizedDescription)
-            }
-        })
-        task.resume()
+        // create the request
+        let url = NSURL(string: "https://secure-fjord-3157.herokuapp.com/api/v1/matches")
+        let request = NSMutableURLRequest(URL: url!)
+        request.HTTPMethod = "GET"
+        request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+        
+        // fire off the request
+        // make sure your class conforms to NSURLConnectionDelegate
+        let urlConnection = NSURLConnection(request: request, delegate: self)
+//        /users/sign_in(.:format)
+        urlConnection!.start()
+        performSegueWithIdentifier("login", sender: nil)
+        }
+        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

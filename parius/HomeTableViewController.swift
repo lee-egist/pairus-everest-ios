@@ -24,29 +24,34 @@ class HomeTableViewController: UITableViewController {
         service = TopicService()
         service.getTopics {
             (response) in
-            //            self.loadTopics(response["topics"]! as! NSArray)
-            self.loadTopics(response)
+            self.loadTopics(response["topics"]! as! NSArray)
+//            self.loadTopics(response)
         }
     }
     
     func loadTopics(topics:NSArray) {
-        //        for topic in topics {
-        //
-        //            let topic = topic["Topic"]! as! NSDictionary
-        //
-        //            var id = Int(topic["id"]! as! String)!
-        //
-        //            var title = topic["title"]! as! String
-        //
-        //            var group_id = Int(topic["group_id"]! as! String)!
-        //
-        //
-        //
-        //        }
+        for topic in topics {
+            
+            var id =  topic["id"] as! Int
+
+            var title = topic["title"]! as! String
+
+            var group_id = topic["group_id"]! as! Int
+
+            var topicObj = Topic(id: id, title: title, group_id: group_id)
+
+            topicsCollection.append(topicObj)
+//
+            dispatch_async(dispatch_get_main_queue()) {
+                self.tableView.reloadData()
+            }
+        }
     }
-    
+
+
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return topicsCollection.count
+//        return 50
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -55,7 +60,8 @@ class HomeTableViewController: UITableViewController {
     override func tableView(tableView: UITableView,
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
             let cell = self.tableView.dequeueReusableCellWithIdentifier("cell")
-            cell?.textLabel?.text = "Hi"
+            cell?.textLabel?.text = topicsCollection[indexPath.row].title
+//            cell?.textLabel?.text = "Hi"
             return cell!
     }
     override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {

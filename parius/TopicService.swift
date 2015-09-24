@@ -16,12 +16,11 @@ class TopicService {
         self.settings = Settings()
     }
     
-    func getTopics(callback:(NSArray) -> ()) {
+    func getTopics(callback:(NSDictionary) -> ()) {
         request(settings.viewTopics, callback: callback)
     }
     
-    func request(url:String, callback:(NSArray) -> ()) {
-        
+    func request(url:String, callback:(NSDictionary) -> ()) {
         let nsURL = NSURL(string: url)
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(nsURL!, completionHandler: { data, response, error -> Void in
@@ -29,7 +28,7 @@ class TopicService {
                 print(error!.localizedDescription)
             }
             do {
-            let response = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers) as! NSArray
+            let response = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers) as! NSDictionary
             callback(response)
             } catch let error as NSError {
             print(error.localizedDescription)
